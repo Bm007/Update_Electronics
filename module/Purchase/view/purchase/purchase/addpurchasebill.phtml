@@ -1,0 +1,104 @@
+<p><a href="" class="path">Home</a> \ <span class="path">Add Purchase Bill</span></p>
+ 
+<div class="whiteBack">
+    <div class="col-sm-6 col-md-6 col-lg-6 contentStyle">
+        <div class="row">
+            <h4>Bill Details</h4>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>Company/Firm</p>
+                <p>Bill Number</p>
+                <p>Date</p>
+                <p>Vendor</p>
+                <p>Payment</p>            
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+                <input type="text" name="firm" />
+                <input type="text" name="billNo" />
+                <input type="text" name="date" />
+                <input type="text" name="vendor" />
+                <input type="text" name="payment" />
+            </div>
+        </div><br>
+        <div class="row">
+            <h4>Product Details</h4>        
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>Name</p>
+                <p>Type</p>
+                <p>Subtype</p>
+                <p>Size</p>
+                <p>Model No</p>            
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+                <input type="text" name="prdctBarcode" />
+                <input type="text" name="prdctName" />
+                <input type="text" name="prdctType" />
+                <input type="text" name="prdctSubType" />
+                <input type="text" name="prdctSize" />
+            </div>                
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 contentStyle">
+        <div class="row">
+            <h4>GST Details</h4>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+                <p>IGST</p>
+                <p>CGST</p>
+                <p>SGST</p> 
+                <p style="color:white">extra</p>
+                <p style="color:white">extra</p>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+                <input type="text" name="igst"/>
+                <input type="text" name="cgst"/>
+                <input type="text" name="sgst"/>            
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+                <p>IGST%</p>
+                <p>CGST%</p>
+                <p>SGST%</p>                        
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+                <input type="text" name="igstper"/>
+                <input type="text" name="cgstper"/>
+                <input type="text" name="sgstper"/>            
+            </div>
+        </div><br>
+        <div class="row">        
+            <h4 style="color:white">Product Details</h4>
+            <div class="col-sm-4 col-md-4 col-lg-4 prodDetails">
+                <p>Sr No</p>
+                <p>Pattern</p>
+                <p>Quantity</p>
+                <p>Rate</p>
+                <p>Price</p>            
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-8 prodDetails">
+                <input type="text" name="avlQty" />
+                <input type="text" name="takenQty" />
+                <input type="text" name="discount" />
+                <input type="text" name="sale" /> 
+                <input type="text" name="price" />            
+            </div>
+        </div>       
+    </div>
+
+    <div class="row ">    
+        <div class="col-sm-12 col-md-12 col-lg-12 summary">
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <h4>Price with GST</h4>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <h4><b>Rs. 850</b></h4>
+            </div>        
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <button class="glyphicon glyphicon-refresh"></button>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <button class="glyphicon glyphicon-plus">&nbsp;Docs</button>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <button class="glyphicon glyphicon-plus">&nbsp;Bill</button>
+            </div>
+        </div>
+    </div>
+</div>

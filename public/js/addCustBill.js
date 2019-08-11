@@ -76,9 +76,13 @@ var Bill = Bill || {};
         }
 
         //Validation for mobile no
+        var mobileNo = /^\d{10}$/;
         if(!$(Bill.element.mobNo).val()){
             bValid = false;
             $(Bill.element.mobNo).addClass("err");
+        }else if(!$(Bill.element.mobNo).val().match(mobileNo)){
+            bValid = false;
+            $(Bill.element.mobNo).addClass("err");            
         }
         else{
             $(Bill.element.mobNo).removeClass("err");
@@ -194,6 +198,24 @@ var Bill = Bill || {};
         $(Bill.element.sale).val('');
         $(Bill.element.address).val('');
         $(Bill.element.bookNo).val('');
+
+        $(Bill.element.billNo).removeClass("err");
+        $(Bill.element.empName).removeClass("err");
+        $(Bill.element.datePicker).removeClass("err");
+        $(Bill.element.paymentMode).removeClass("err");
+        $(Bill.element.custName).removeClass("err");
+        $(Bill.element.mobNo).removeClass("err");
+        $(Bill.element.prdctBarcode).removeClass("err");
+        $(Bill.element.prdctName).removeClass("err");
+        $(Bill.element.prdctType).removeClass("err");
+        $(Bill.element.prdctSubType).removeClass("err");
+        $(Bill.element.prdctSize).removeClass("err");
+        $(Bill.element.avlQty).removeClass("err");
+        $(Bill.element.takenQty).removeClass("err");
+        $(Bill.element.discount).removeClass("err");
+        $(Bill.element.sale).removeClass("err");
+        $(Bill.element.address).removeClass("err");
+        $(Bill.element.bookNo).removeClass("err");
     });
 
 })(Bill);

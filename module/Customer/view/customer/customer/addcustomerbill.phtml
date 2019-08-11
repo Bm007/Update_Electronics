@@ -1,5 +1,5 @@
 <p><a href="" class="path">Home</a> \ <span class="path">Add Customer Bill</span></p>
- 
+
 <div class="whiteBack">
     <div class="col-sm-6 col-md-6 col-lg-6 contentStyle">
         <div class="row">
@@ -12,11 +12,18 @@
                 <p>Payment</p>            
             </div>
             <div class="col-sm-8 col-md-8 col-lg-8">
-                <input type="text" name="billNo" />
-                <input type="text" name="empName" />
-                <input type="text" name="date" />
-                <input type="text" name="bookNo" />
-                <input type="text" name="payment" />
+                <input type="text" name="billNo" id="billNo"/>
+                <input type="text" name="empName" id="empName"/>
+                <input type="text" name="date"  id="datePicker"/>
+                <input type="text" name="bookNo" id="bookNo"/>
+                <!-- <input type="text" name="payment" /> -->
+                <select name="payment" id="payment">
+                    <option value="" disabled selected>Please select payment mode</option>
+                    <option value="1">Cash</option>
+                    <option value="2">Credit</option>
+                    <option value="3">Debit</option>
+                    <option value="4">Netbanking</option>
+                </select>
             </div>
         </div><br>
         <div class="row">
@@ -29,11 +36,11 @@
                 <p>Product Size</p>            
             </div>
             <div class="col-sm-8 col-md-8 col-lg-8">
-                <input type="text" name="prdctBarcode" />
-                <input type="text" name="prdctName" />
-                <input type="text" name="prdctType" />
-                <input type="text" name="prdctSubType" />
-                <input type="text" name="prdctSize" />
+                <input type="text" name="prdctBarcode" id="prdctBarcode"/>
+                <input type="text" name="prdctName" id="prdctName" />
+                <input type="text" name="prdctType" id="prdctType"/>
+                <input type="text" name="prdctSubType" id="prdctSubType" />
+                <input type="text" name="prdctSize" id="prdctSize" />
             </div>
         </div>
     </div>
@@ -46,9 +53,9 @@
                 <p>Address</p>                        
             </div>
             <div class="col-sm-8 col-md-8 col-lg-8">
-                <input type="text" name="custName" />
-                <input type="text" name="mobNo" />
-                <input type="text" name="address" class="address"/>            
+                <input type="text" name="custName" id="custName"/>
+                <input type="text" name="mobNo" pattern="^\d{10}$" id="mobNo"/>
+                <input type="text" name="address" class="address" id="address"/>            
             </div>
         </div><br>
         <div class="row">        
@@ -60,10 +67,10 @@
                 <p></p>            
             </div>
             <div class="col-sm-8 col-md-8 col-lg-8 orderDetailsDiv">
-                <input type="text" name="avlQty" />
-                <input type="text" name="takenQty" />
-                <input type="text" name="discount" />
-                <input type="text" name="sale" />            
+                <input type="text" name="avlQty" id="avlQty"/>
+                <input type="text" name="takenQty" id="takenQty"/>
+                <input type="text" name="discount" id="discount"/>
+                <input type="text" name="sale" id="sale"/>            
             </div>
         </div>       
     </div>
@@ -77,14 +84,17 @@
                 <h4><b>Rs. 850</b></h4>
             </div>        
             <div class="col-sm-2 col-md-2 col-lg-2">
-                <button class="glyphicon glyphicon-refresh"></button>
+                <button class="glyphicon glyphicon-refresh" id="refresh"></button>
             </div>
             <div class="col-sm-2 col-md-2 col-lg-2">
                 <button class="glyphicon glyphicon-plus">&nbsp;Docs</button>
             </div>
             <div class="col-sm-2 col-md-2 col-lg-2">
-                <button class="glyphicon glyphicon-plus">&nbsp;Bill</button>
+                <button class="glyphicon glyphicon-plus" id="addBill">&nbsp;Bill</button>
             </div>
         </div>
     </div>
 </div>
+<?php
+    echo $this->inlineScript()->prependFile($this->basePath('js/addCustBill.js'))                              
+?>

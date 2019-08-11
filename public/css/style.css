@@ -126,9 +126,13 @@ padding-left:3%;
   padding-top:5%;
 }
   
-.contentStyle input{
+.contentStyle input,select{
   width:95%;
   margin-top:3%;
+}
+
+.contentStyle select{
+  height:25px;
 }
 
 .contentStyle .address{
@@ -173,4 +177,8 @@ margin-top:9.8%;
 .whiteBack{
   background-color:white;
   width:99%;
+}
+
+.err{
+  border: solid red 1px;
 }
